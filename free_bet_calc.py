@@ -4,6 +4,7 @@
 from cli_ui import info, reset, bold, blue, yellow, red
 from math import log2 
 
+<<<<<<< Updated upstream
 def calc_bet(back_bet_amt, back_bet_odds, lay_bet_amt, lay_bet_odds, is_free_bet: bool = True):
     if is_free_bet:
         BET_LOSE = 0
@@ -14,6 +15,18 @@ def calc_bet(back_bet_amt, back_bet_odds, lay_bet_amt, lay_bet_odds, is_free_bet
     LAY_LIABILITY = "{0:.2f}".format(lay_bet_amt * (lay_bet_odds - 1))
     LAY_WIN = lay_bet_amt
     EVENT_WIN = "{0:.2f}".format(BET_WIN - float(LAY_LIABILITY))
+=======
+def calc_bet(bf, bfo, l, lo):
+    BET_LOSE = 0
+    BET_WIN = (bf * bfo) - bf
+    LAY_LIABILITY = l * (lo - 1)
+    LAY_LOSE = LAY_LIABILITY * -1
+    LAY_WIN = l
+
+
+    
+    EVENT_WIN = "{0:.2f}".format(BET_WIN - LAY_LIABILITY)
+>>>>>>> Stashed changes
     EVENT_LOSE = "{0:.2f}".format(LAY_WIN - BET_LOSE)
 
     print(f"BACK BET: {back_bet_amt}@{back_bet_odds}\nLAY BET: {lay_bet_amt}@{lay_bet_odds} ({LAY_LIABILITY} liability)")
