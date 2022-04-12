@@ -1,0 +1,16 @@
+A way to calculate a weight value, to be multiplied by the ratio of the back odds and lay odds
+
+WHAT WE KNOW
+
+Satisfactory results are given when:
+    a) back odds are 10
+    b) lay odds are 11.5, or 12.5
+    c) weight value is 0.9
+
+Hypothesis:
+    Lay bet stake can be calculated by the following:
+        ([back odds / lay odds] * weight value ) * back stake
+
+Why I think this:
+    The relationship between the back odds and lay odds is cruical to profitability. But it also seems as those their true values can also play a part in this too.
+    Also in order to calculate a profitable lay stake we need to know the back stake as to not overlay or underlay.
